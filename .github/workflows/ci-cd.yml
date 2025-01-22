@@ -45,7 +45,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/api-demo:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/api-test:latest
           
   deploy:
     needs: build-and-push

@@ -37,12 +37,12 @@ pytest tests/
 
 Build the image:
 ```bash
-docker build -t api-demo .
+docker build -t api-test .
 ```
 
 Run the container:
 ```bash
-docker run -p 8000:8000 api-demo
+docker run -p 8000:8000 api-test
 ```
 
 ## CI/CD Pipeline
