@@ -1,0 +1,6 @@
+git status
+git add .github/workflows/ci-cd.yml && git commit -m "message"
+git checkout main
+git merge develop
+
+git add app/main.py && git commit -m "message"
