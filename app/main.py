@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List
@@ -13,7 +12,7 @@ class Item(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World War 2 "}
+    return {"message": "Hello World"}
 
 @app.get("/health")
 async def health_check():

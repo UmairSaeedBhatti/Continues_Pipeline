@@ -26,3 +26,11 @@ docker run -p 8000:8000 api-test
 # Test endpoints again (in a new terminal)
 curl http://localhost:8000/
 curl http://localhost:8000/health
+
+http://localhost:8000/users/1/items?limit=5
+
+# To create items (run in a new terminal):
+curl -X POST http://localhost:8000/items/ -H "Content-Type: application/json" -d '{"id": 1, "name": "Test Item", "price": 29.99}'
+
+# Create item with description:
+curl -X POST http://localhost:8000/items/ -H "Content-Type: application/json" -d '{"id": 2, "name": "Another Item", "price": 49.99, "description": "A nice item"}'
