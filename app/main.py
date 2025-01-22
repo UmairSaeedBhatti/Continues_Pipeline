@@ -13,7 +13,7 @@ class Item(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World War 2 "}
 
 @app.get("/health")
 async def health_check():

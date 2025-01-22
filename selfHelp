@@ -6,3 +6,23 @@ git merge develop
 git add app/main.py && git commit -m "message"
 
 //comment in the code for develop branch
+
+
+pip install -r requirements.txt
+pytest tests/
+uvicorn app.main:app --reload
+# Test root endpoint
+curl http://localhost:8000/
+
+# Test health endpoint
+curl http://localhost:8000/health
+
+# Build the Docker image
+docker build -t api-test .
+
+# Run the container
+docker run -p 8000:8000 api-test
+
+# Test endpoints again (in a new terminal)
+curl http://localhost:8000/
+curl http://localhost:8000/health
